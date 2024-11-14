@@ -1,0 +1,235 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centering the card container */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevents scrollbar appearance when button moves */
+}
+
+/* Card styling */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    position: relative;
+    z-index: 1;
+}
+
+.intro {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.button.yes {
+    background-color: #ff69b4;
+    color: #fff;
+}
+
+.button.no {
+    background-color: #d3d3d3;
+    color: #ff6347;
+    position: relative;
+    z-index: 10;
+}
+
+.button span {
+    margin-left: 8px;
+    font-size: 1.5rem;
+}
+
+/* Hidden Message Styling */
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+    color: #fff;
+    position: relative;
+}
+
+/* Message Card */
+.message-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+/* Animation for Floating Hearts */
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-20px) scale(1.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+    }
+}
+
+.heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: red;
+    animation: floatHeart 3s infinite ease-in-out;
+    pointer-events: none;
+}
+
+/* Creating Floating Hearts Background */
+.heart1 {
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.heart2 {
+    left: 40%;
+    animation-delay: 1s;
+}
+
+.heart3 {
+    left: 60%;
+    animation-delay: 2s;
+}
+
+.heart4 {
+    left: 80%;
+    animation-delay: 3s;
+}
+
+.heart5 {
+    left: 10%;
+    animation-delay: 2.5s;
+}
+
+.heart6 {
+    left: 70%;
+    animation-delay: 1.5s;
+}
+
+.heart7 {
+    left: 30%;
+    animation-delay: 3.5s;
+}
+
+.heart8 {
+    left: 90%;
+    animation-delay: 0.5s;
+}
+
+.heart9 {
+    left: 50%;
+    animation-delay: 1s;
+}
+
+/* Ensuring the hearts are behind content */
+.message {
+    position: relative;
+    z-index: 0;
+}
+
+.message-card {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        max-width: 280px;
+        padding: 15px;
+    }
+
+    .card h2 {
+        font-size: 1.2rem;
+    }
+
+    .button {
+        font-size: 0.9rem;
+    }
+
+    .message {
+        font-size: 1.2rem;
+    }
+
+    .message-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        max-width: 250px;
+        padding: 10px;
+    }
+
+    .card h2 {
+        font-size: 1rem;
+    }
+
+    .button {
+        font-size: 0.8rem;
+    }
+
+    .message {
+        font-size: 1rem;
+    }
+
+    .message-card {
+        padding: 15px;
+    }
+
+    .heart {
+        font-size: 40px;
+    }
+}
