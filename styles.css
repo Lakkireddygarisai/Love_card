@@ -80,6 +80,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100vw;  /* Ensure it takes full width */
     font-family: Arial, sans-serif;
     font-size: 1.5rem;
     text-align: center;
@@ -117,9 +118,6 @@ body {
 
 .heart {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 50px;
     color: red;
     animation: floatHeart 3s infinite ease-in-out;
@@ -128,46 +126,55 @@ body {
 
 /* Creating Floating Hearts Background */
 .heart1 {
+    top: 10%;
     left: 20%;
     animation-delay: 0s;
 }
 
 .heart2 {
+    top: 30%;
     left: 40%;
     animation-delay: 1s;
 }
 
 .heart3 {
+    top: 50%;
     left: 60%;
     animation-delay: 2s;
 }
 
 .heart4 {
+    top: 70%;
     left: 80%;
     animation-delay: 3s;
 }
 
 .heart5 {
+    top: 90%;
     left: 10%;
     animation-delay: 2.5s;
 }
 
 .heart6 {
+    top: 20%;
     left: 70%;
     animation-delay: 1.5s;
 }
 
 .heart7 {
+    top: 40%;
     left: 30%;
     animation-delay: 3.5s;
 }
 
 .heart8 {
+    top: 60%;
     left: 90%;
     animation-delay: 0.5s;
 }
 
 .heart9 {
+    top: 80%;
     left: 50%;
     animation-delay: 1s;
 }
